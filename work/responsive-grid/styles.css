@@ -1,0 +1,132 @@
+*,*::before,*::after{
+	box-sizing: border-box;
+	list-style: none;
+}
+html,body{
+	height:100%;
+	margin:0;
+	background-color: papayawhip;
+	font-family: sans-serif;
+}
+body{
+	display: grid;
+	grid-template-areas:  "header header"
+						  "main main"
+						  "footer footer";
+	grid-template-columns: 20% 1fr;
+}
+header{
+	display: grid;
+	grid-area: header;
+	gap: 1rem;
+}
+header > div{
+	display: flex;
+	flex-direction: row;
+}
+.localnav__menu{
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	padding: 0; 
+	margin: 0;
+	line-height: 1.2;
+	justify-content: space-around;
+	
+}
+.pic{
+	width: 10%;
+	padding-top: 0;
+	padding-right: 0;
+	margin:0px 0px;
+	vertical-align: middle;
+}
+h1{
+	display: inline-block; 
+	flex-direction: space-around;
+	flex-direction: row;
+}
+h2{
+	display: inline-block;
+
+}
+#root {
+	display:grid;
+	flex-direction: row;
+	grid-template-columns: repeat(12,1fr);
+	gap: 1rem;
+}
+.card{
+	grid-column: 3 / 6;
+	
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	
+	border: 1px solid black;
+	border-radius: 2rem;
+	padding: 1rem;
+	background-color: #eee;
+}
+.card:hover{
+	background-color: #fff;
+}
+.card__link{
+	padding:  1rem;
+	border-radius: 1rem;
+	background-color: green;
+	color:white;
+	text-decoration: none;
+}
+.card__link:hover{
+	box-shadow: 3px 3px 3px 3px gray;
+}
+.card.pic{
+	grid-column: span 4;
+	width: max(30% 30%);
+}
+.content{
+	grid-column: span 4;
+	background-color: aquamarine;
+}
+.content.special{
+	grid-column: 3/6;
+}
+.footer{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	padding: 20px;
+	font-size: small;
+	grid-area: footer;
+	grid-template-columns: repeat(12,1fr);
+
+}
+@media screen and (min-width: 50rem){
+	body{
+		display: grid;
+		grid-template-areas:  "header header"
+							  "main main"
+							  "footer";
+		grid-template-columns: auto 1fr;
+		grid-template-rows: auto auto 1fr;
+	}
+	.header{
+		grid-area: header;
+	}
+	.localnav__menu{
+		grid-area: localnav;
+		flex-direction: row;
+	}
+	.main{
+		grid-area: main;
+		background-color: pink;
+	}
+	.content{
+		grid-column: span 6;
+		background-color: #C0FFEE;
+	}
+	.content.special{
+		grid-column: span 12;
+	}
+}

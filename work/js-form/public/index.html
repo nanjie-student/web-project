@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>JS-form</title>
+        <script defer src="site.js"></script>
+        <link rel="stylesheet" href="styles.css">
+	</head>
+	<body>
+        <header>
+            <h1>Register</h1>
+        </header>
+        <main>
+            <form class="register" action="/register" method="POST">
+                <div class="register__name register-name">
+                    <label for="name">Name:</label>
+                    <span class="register-name__error">
+                        This field is required
+                    </span>
+                    <input name="name" class="register-name__input" id="name" type="">
+                </div>
+                <div class="register__email register-email">
+                    <label for="email">Email:</label>
+                    <span class="register-email__error">
+                        This field is required
+                    </span>
+                    <input name="email" class="register-email__input" id="email" type="text">
+                </div>
+                <div class="register__confirm register-confirm">
+                    <label for="confirm">Confirm Email:</label>
+                    <span class="register-confirm__error">
+                        This field must match the email
+                    </span>
+                    <input name="confirm" class="register-confirm__input" id="confirm email" type="text">
+                </div>
+                <div class="register__checkbox register-checkbox">
+                    <label for="checkbox">Want-spam:</label>
+                    <input name="want-spam" type="checkbox" class="register__checkbox">
+                </div> 
+                <div class="register_select register-select">
+                    <label class="register__label">
+                        <select name="tier" id="tier-select">
+                            <option value="">--Please choose a tier--</option>
+                            <option value="A class">A</option>
+                            <option value="A- class">A-</option>
+                            <option value="B class">B</option>
+                            <option value="B- class">B+</option>
+                        </select>
+                    </label>
+                </div>
+                <button type="submit" class="register__submit">Register</button>
+            </form>
+        </main>
+        <footer>
+            We really don't care about your privacy,see our<a href="privacy.html">Privacy Policy</a>
+        </footer>
+	</body>
+</html>

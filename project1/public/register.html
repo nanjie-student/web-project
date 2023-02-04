@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+        <meta name="viewpoint" content="width=divice-width,initial-scale=1.0">
+		<title>Register</title>
+        <h1>Welcome to turtle's world</h1>
+        <link rel="stylesheet" href="styles.css"/>
+	</head>
+	<body>
+        <header>
+            <h2>Register</h2>
+        </header>
+        <main class="register_main">
+            <div id="outer">
+                <form action="/submit" method="POST">
+                    <div class="one">
+                        <label for="name"> 
+                            <span>Name: </span>
+                        <input id="name" type="text"  name="name" required/><br><br>
+                        </label>
+                    </div>
+                    <div class ="two"> 
+                        <label for="email">
+                            <span>Email: </span>
+                        <input id="email" type="text" name="email"  required/><br><br>
+                        </label>
+                    </div>
+                    <div class ="three">
+                        <label for="spam">Yes! I want a mailbox full of messages I will not read
+                            <input type="checkbox" name="spam" id="spam" ><br><br>
+                        </label>
+                    </div>
+                    <div class="four">
+                        <label for="turtles">Choose your favorite:
+                            <select name="animals" id="turtles">
+                                <option value="Kinosternidae">Kinosternidae</option>
+                                <option value="Cheloniidae">Cheloniidae</option>
+                                <option value="Chelydridae">Chelydridae</option>
+                            </select>
+                        </label>
+                    </div>
+                    <button type="submit">Register</button>
+                </form>
+            </div>
+        </main>
+    </body>
+        <footer>
+            We really don't care about your privacy,see our <a href="privacy.html">Privacy Policy</a>
+        </footer>
+	</body>
+</html>

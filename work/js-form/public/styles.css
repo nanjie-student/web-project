@@ -1,0 +1,146 @@
+body{
+    display: contents;
+    padding: 12px 20px;
+    margin: 8px;
+    border: 1px solid black;
+    min-height: 10vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
+}
+header,footer{
+    background-color: aquamarine;
+    padding: inherit;
+}
+
+h1 {
+    justify-content: center;
+    background-color: aquamarine;
+}
+main{
+    border: 1px solid black;
+    background-color: pink;
+
+}
+#input {
+    width: 100%;
+}
+.register__label {
+    display: contents;
+    width: 50%;
+    justify-content: center;
+}
+.register_name,
+.register__email,
+.register__confirm {
+    display : block;
+    flex-direction: column;   
+}
+.register__checkbox {
+    display: inline;
+}
+.register__select{
+    justify-content: center;
+}
+:invalid { /*  class on field */
+    border: 1px solid red;
+}
+.register-name__error,
+.register-email__error,
+.register-confirm__error {
+    display: none;
+    color: red;
+}
+.register-name--invalid .register-name__error,
+.register-email--invalid .register-email__error,
+.register-confirm--invalid .register-confirm__error {
+    display: initial;
+}
+
+.container {
+    display: block;
+    border-radius: 1rem;
+    background-color: pink;
+    color:white;
+
+}
+@media screen and (min-width: 40rem){
+	body{
+        display: contents;
+        padding: 12px 20px;
+        margin: 8px;
+        border: 1px solid black;
+        min-height: 10vh;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover; 
+
+    }
+    header,footer{
+        background-color: yellow;
+        padding: inherit;
+    }
+    h1 {
+        justify-content: center;
+        background-color: yellow;
+    }
+    main{
+        display: block;
+        border: 1px solid black;
+        background-color: pink;
+        justify-content:  center;
+    }
+    /* div {
+        display: inline-block;
+        width: 50%;
+        grid-template-columns: span 2;
+    } */
+    /* .register__label {
+        display: contents;
+        width: 50%;
+    } */
+    .register_name,
+    .register__email,
+    .register__confirm {
+        display : inline-block;
+        flex-direction: column;
+    }
+    .register__checkbox {
+        display: inline;
+    }
+    .register__select{
+        justify-content: center;
+    }
+    :invalid { /*  class on field */
+        border: 1px solid red;
+    }
+    .register-name__error{
+        display: none;
+        color: red;
+    }
+    .register-email__error,
+    .register-confirm__error {
+        display: none;
+        color: red;
+    }
+    .register-name--invalid .register-name__error,
+    .register-email--invalid .register-email__error,
+    .register-confirm--invalid .register-confirm__error {
+        display: initial;
+    }
+    
+    .container {
+        display: block;
+        border-radius: 1rem;
+        background-color: pink;
+        color:white;
+    
+    }
+	
+}

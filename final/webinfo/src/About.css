@@ -1,0 +1,40 @@
+.about__title {
+    text-align: center; 
+}
+.subscribe__controls {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid black;
+    justify-content: center;
+    padding-top: 2rem;
+    gap: 2rem;
+}
+.subscribe__logo {
+    width:200px;
+    height: 200px;
+}
+.subscribe__content {
+    display: inline-block;  
+}
+#span1 {
+    width: 15%;
+    height: 10%;
+    display: inline-block;
+}
+.subscribe__open {
+    background-color: #f4511e;
+    font-size: 12px;
+    color: black;
+    margin: 4px 2px;
+    opacity: 0.6;
+    transition: 0.3s;
+    display: inline-block;
+    border: 1px solid black;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24);
+}
+.button:hover {
+    opacity: 1;
+}
+.about__button {
+    text-align: center;
+}

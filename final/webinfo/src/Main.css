@@ -1,0 +1,8 @@
+.main {
+    background-color: var(--primary-bg);
+}
+@media screen and (min-width: 44rem){
+    .main {
+        background-color: var(--primary-bg);
+    }
+}

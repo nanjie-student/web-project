@@ -1,0 +1,139 @@
+/* Adapted from https://css.gg/menu per MIT Licence */
+.gg-menu {
+    transform: scale(var(--ggs,1))
+   }
+.gg-menu,
+.gg-menu::after,
+.gg-menu::before {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    width: 20px;
+    height: 2px;
+    margin: auto;
+    border-radius: 3px;
+    background: currentColor
+}
+.gg-menu::after,
+.gg-menu::before {
+    content: "";
+    position: absolute;
+    top: -6px
+} 
+.gg-menu::after {
+    top: 6px
+} 
+/* End Adapted code*/
+.header {
+    display: grid;
+    grid-template-areas:
+        "header-title header-title header-logo"
+        "header-toggle theme-switcher header-subtitle"
+        "header-nav header-nav header-nav"
+    ;
+    grid-template-columns: auto auto 1fr;
+    align-items: center;
+    background-color: var(--header-bg);
+}
+.header__toggle { /*hamburger menu*/
+    grid-area: header-toggle;
+    width: 54px;
+    height: 54px;
+    border: none;
+    background-color: inherit;
+    font-size: inherit;
+}
+.header__logo {
+    grid-area: header-logo;
+    margin-right: 0.5rem;
+    border-radius: 2rem;
+    width:100px;
+    height:100px;
+}
+.header__title {
+    grid-area: header-title;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.header__subtitle {
+    grid-area: header-subtitle;
+    padding: 0.5rem;
+}
+.header__theme-switcher{
+    grid-area: theme-switcher;
+    padding: 2rem;
+}
+.header__nav { 
+    grid-area: header-nav;
+    display: none;
+    position: absolute;
+    top: 150px;
+}
+.header-nav__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0;
+    margin: 2;
+    list-style: none;
+    line-height: 1.6;
+    background: skyblue;
+}
+.header-nav__link {
+    display: inline-block;
+    padding: 0.5rem  1rem;
+    font-size: 1.3rem;
+}
+.header-nav__link:hover {
+    background-color : dodgerblue;
+    color: black;
+    width: 100%;
+}
+.header__nav--open { 
+    display: initial;
+}
+  
+@media screen and (min-width: 44rem) { 
+    .header { 
+        grid-template-areas: 
+        "header-title header-title header-logo"
+        "header-toggle theme-switcher header-subtitle"
+        "header-nav header-nav header-nav"
+      ;
+        grid-template-columns: 1fr auto auto;
+    }
+    .header__title{
+        grid-area: header-title;
+        text-align: center;
+    }
+    .header__logo{
+        grid-area: header-logo;
+        
+    }
+    .header__toggle {
+      display: none;
+    }
+    .header__nav{
+        display: flex;
+    }
+    .header-nav__list { 
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      padding:0;
+      margin: 0;
+      list-style: none;
+    }
+    .header-nav__link:hover{
+        border-radius: 1rem;
+    }
+    .header__subtitle {
+        grid-area: header-subtitle;
+        padding: 0.5rem;
+    }
+    .header__theme-switcher{
+        grid-area: theme-switcher;
+        padding: 2rem;
+    }
+}
